@@ -18,27 +18,37 @@
 ###
 - **Agility:** Deploying and configuring resources quickly as business requirements change.
 - **Scalability:** Add RAM, CPU or entire VMs to a configuration.
-- **Horizontal scaling:** Increasing compute capacity by adding instances of resources.
+- **Horizontal scaling:** Increasing compute capacity by adding instances of resources (e.g. additional virtual machine).
 - **Vertical scaling:** Increasing RAM or CPU of an existing resource.
 - **Elasticity:** configure auto-scaling so apps always have the resources they need.
 - **High Availability:** provide continuous user experience with no apparent/minimal downtime even when things go wrong.
 - **Disaster Recovery:** Keeping data and other assets safe in the event of a disaster.
 
 ###
+- **On-premises:**
+  - Customer responsible for managing OS and applications.
 - **IaaS:**
   - Examples: Azure VMs, VNETs.
   - Most control over hardware/managing physical servers.
   - Customer responsible for managing OS and applications.
+  - Uses consumption-based, pay-as-you-go model.
 - **PaaS:**
   - Examples: Azure SQL Database, Azure App Services, Azure Cosmos DB, Azure Monitor.
   - Do not control OS and do not configure underlying servers.
   - Cloud provider is responsible for managing OS.
   - Create a platform to host a software/create custom application yourself.
   - Used when needed to focus on application development.
+  - OS is not accessible by customer.
+  - Uses consumption-based, pay-as-you-go model.
 - **SaaS:**
   - Example: MS Office 365.
   - Use software hosted on cloud.
+  - Customer does not manage OS.
   - Cloud provider is responsible for managing OS.
+  - OS is not accessible by customer.
+  - Typically, one version of the application is used by all customers.
+  - Licensed through a monthly/annual subscription.
+  - Software is centrally hosted and managed for all users/customers.
 
 ###
 - **Azure Pricing Calculator:** used to estimate costs for based on resource requirements.
@@ -53,11 +63,15 @@
 - **Azure Policy:**
   - enforce company standards on Azure resources.
   - manage policies that control or audit resources to ensure configurations stay compliant with corporate standards.
+  - E.g. enforce MFA on all accounts with write permissions.
+  - E.g. ensure development team only creates VMs of a specific size.
 - **Azure RBAC:**
   - Applied to a scope.
   - Scope is a resource or set of resources to which access is applied to.
 - **Resource Locks:** prevent the accidental change or deletion of a resource.
-- **Resource Tags:** locate and act on resource associated with a specific workloads, environments, business units, or owners.
+- **Resource Tags:**
+  - locate and act on resource associated with a specific workloads, environments, business units, or owners.
+  - associate different resources without changing their locations.
 - **Resource Groups:**
 
 ###
@@ -104,6 +118,8 @@
   - Platform that collects metric and logging data.
   - Can be used to trigger auto-scaling using thresholds.
 - **Application Insights:**
+  - Automatically detect performance anomalies for web apps.
+  - Use built-in analytics to see what users do on an app.
 
 ###
 - **Azure Container Instances** & **Azure Kubernetes Service (AKS):**
