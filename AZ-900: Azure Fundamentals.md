@@ -9,14 +9,21 @@
   - The company has control over physical resources and security.
   - Customer is responsible for storage, VMs and runtime.
 - **Hybrid**:
+  - A hybrid cloud environment can be used to allow a private cloud to surge for increased, temporary demand by deploying public cloud resources.
+  - Can be used to provide an extra layer of security i.e. users can flexibly choose which services to keep in public cloud and which to deploy to their private cloud infrastructure.
+  - this cloud model uses some datacenters focused on providing cloud services to anyone that wants them, and some data centers that are focused on a single customer
+- **Multi-cloud**:
+  - two (or more) public cloud providers and manage resources and security in both environments.
 - **Adantages of cloud computing over on-premises deployment:** scaling more quickly.
 - **Compute + storage:** two services provided by all cloud providers.
 - **Colocation:** business rents space in a shared physical datacenter.
 - **Application Development:** responsibility of customer and typically done in-house or via a third party.
+
 - **Capital Exepnditure (CapEx):** Upfront costs incurred one time e.g. hardware purchases.
 - **Operational Exepnditure (OpEx):** Billed as you go; no upfront costs.
 - **Geo-location:** allows you to deploy applications to regional datacenters across the world.
 - **Geo-distribution:** ensuring customers have the best performance in their region by deploying apps and data to regional datacenters across the world.
+
 
 ###
 - **Agility:** Deploying and configuring resources quickly as business requirements change.
@@ -27,16 +34,29 @@
 - **High Availability:** provide continuous user experience with no apparent/minimal downtime even when things go wrong; depends on SLA chosen.
 - **Disaster Recovery:** Keeping data and other assets safe in the event of a disaster.
 
-###
+### Shared Responsibility Model
+ - **Applications**:
+  - IaaS: you are fully responsible for deploying applications.
+  - PaaS: Microsoft manages parts of the application stack, but you're responsible for application configuration, code security, and access controls.
+  - SaaS: Microsoft manages parts of the application stack, but you're responsible for application configuration, code security, and access controls.
+ - **Network Controls**:
+  - IaaS: you configure all network security including firewalls and network segmentation.
+  - PaaS: Microsoft provides baseline network security, but you configure application-level network controls.
+  - SaaS: Microsoft manages network security.
+ - **Client Devices**:
+  - IaaS: you're fully responsible for endpoint protection and compliance.
+  - PaaS: you're fully responsible for endpoint protection and compliance.
+  - SaaS: Microsoft may provide some device management capabilities, but you're responsible for endpoint protection and compliance.
 - **On-premises:**
   - Customer responsible for managing OS and applications.
 - **IaaS:**
-  - Examples: Azure VMs, VNETs.
+  - Examples: Azure VMs, VNETs, Azure Disk Storage.
   - Most control over hardware/managing physical servers.
   - Customer responsible for managing OS and applications, VMs and runtime.
   - Uses consumption-based, pay-as-you-go model.
+  - Places the most responsibility on the customer
 - **PaaS:**
-  - Examples: Azure SQL Database, Azure App Services, Azure Cosmos DB, Azure Monitor.
+  - Examples: Azure SQL Database, Azure App Services, Azure Cosmos DB, Azure Monitor, Azure Functions, and Azure Storage..
   - Do not control OS and do not configure underlying servers.
   - Cloud provider is responsible for managing OS and physical network.
   - Customer is responsible for managing accounts, identities, information and data and user access.
@@ -45,7 +65,7 @@
   - OS is not accessible by customer.
   - Uses consumption-based, pay-as-you-go model.
 - **SaaS:**
-  - Example: MS Office 365.
+  - Example: MS Office 365, Dynamics 365.
   - Use software hosted on cloud.
   - Customer does not manage OS.
   - Cloud provider is responsible for managing OS and all aspects of the application environment.
@@ -54,6 +74,14 @@
   - Typically, one version of the application is used by all customers.
   - Licensed through a monthly/annual subscription.
   - Software is centrally hosted and managed for all users/customers.
+- **ALWAYS RESPONSIBLE NO MATTER WHAT IAAS, SAAS, PAAS OR ON-PREMISES**:
+  - **Data**: data classification, data protection, encryption decisions, and compliance with data governance requirements.
+  - **Endpoints**: protecting client devices and endpoints that access your cloud services, including mobile devices, laptops, and desktops.
+  - **Accounts**: creating, managing, and removing user access and accounts.
+  - **Access Management**: implementing and managing access controls, including RBAC, MFA, and conditional access policies. 
+- **AI Shared Responsibility**:
+  - Microsoft is responsible for securing the AI infrastructure, model hosting, and platform-level safeguards.
+  - Customers, however, remain accountable for how AI is applied within their environment—this includes protecting sensitive data, managing prompt security, mitigating prompt injection risks, and ensuring compliance with organizational and regulatory requirements.
 
 ###
 - **Total Costs of Ownership (TCO) Calculator:**
@@ -71,6 +99,19 @@
 - **Azure Arc:**
   - simplifies governance and management by delivering a consistent multi-cloud and on-premises management platform.
   - E.g. manage servers across third-party cloud platforms and on-premises environments.
+  - Azure Arc can help manage your cloud environment whether it's a public cloud solely on Azure, a private cloud in your datacenter, a hybrid configuration, or even a multi-cloud environment running on multiple cloud providers at once.
+ - **Azure VMware Solutions**:
+  - VMware in a private cloud environment but want to migrate to a public or hybrid cloud? Azure VMware Solution lets you run your VMware workloads in Azure with seamless integration and scalability.
+  - service developed by Microsoft in partnership with VMware, allowing organizations to migrate VMware-based workloads from on-premises to Azure.
+  - allows for gradual migration to the cloud, with integration options for native Azure services such as Log Analytics, Microsoft Defender for Cloud, and Azure Backup Server.
+  - Customers can modernize applications running on VMware over time through integration with Azure native management, security, and services.
+  - also provides high availability and business continuity options because service has built-in redundancy with no single point of failure.
+  - Utilization of existing VMware investments without the need for retraining.
+  - Operational consistency for administrators and businesses, reducing change management.
+  - A single point of support from Microsoft, simplifying licensing.
+  - The ability to maximize existing Windows Server and SQL Server licenses through Azure Hybrid Benefit.
+  - accelerate migration and minimize downtime by using the latest VMware Hybrid Cloud Extension (HCX) Enterprise functionality for large-scale, live migration from on-premises to Azure.
+  - **Azure NetApp Files** is a native Azure service can be used to mount virtual machine (VM) file shares using server message block (SMB) or network file system (NFS).
 - **Microsoft Purview:**
   - Data Catalog - enables data discovery.
   - Data Sharing - shares data within and between organizations.
