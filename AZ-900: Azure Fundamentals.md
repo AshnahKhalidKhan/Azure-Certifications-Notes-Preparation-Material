@@ -58,6 +58,9 @@
   - Customer responsible for managing OS and applications, VMs and runtime.
   - Uses consumption-based, pay-as-you-go model.
   - Places the most responsibility on the customer
+  - **Uses:**
+    - Lift-and-shift migration: You’re setting up cloud resources similar to your on-prem datacenter, and then simply moving the things running on-prem to running on the IaaS infrastructure.
+    - Testing and development: You have established configurations for development and test environments that you need to rapidly replicate. You can start up or shut down the different environments rapidly with an IaaS structure, while maintaining complete control.
 - **PaaS:**
   - Examples: Azure SQL Database, Azure App Services, Azure Cosmos DB, Azure Monitor, Azure Functions, and Azure Storage..
   - Do not control OS and do not configure underlying servers.
