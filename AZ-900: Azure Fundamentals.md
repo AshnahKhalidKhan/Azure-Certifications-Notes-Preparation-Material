@@ -71,9 +71,12 @@
   - OS is not accessible by customer.
   - Uses consumption-based, pay-as-you-go model.
   - **Uses:**
-    - 
+    - PaaS provides a framework that developers can build upon to develop or customize cloud-based applications.
+    - PaaS lets developers create applications using built-in software components.
+    - Tools provided as a service with PaaS allow organizations to analyze and mine their data, finding insights and patterns and predicting outcomes to improve forecasting, product design decisions, investment returns, and other business decisions.
 - **SaaS:**
   - Example: MS Office 365, Dynamics 365.
+  - With SaaS, you’re essentially renting or using a fully developed application.
   - Use software hosted on cloud.
   - Customer does not manage OS.
   - Cloud provider is responsible for managing OS and all aspects of the application environment.
@@ -83,9 +86,9 @@
   - Licensed through a monthly/annual subscription.
   - Software is centrally hosted and managed for all users/customers.
   - **Uses:**
-    - PaaS provides a framework that developers can build upon to develop or customize cloud-based applications.
-    - PaaS lets developers create applications using built-in software components.
-    - Tools provided as a service with PaaS allow organizations to analyze and mine their data, finding insights and patterns and predicting outcomes to improve forecasting, product design decisions, investment returns, and other business decisions.
+    - Email and messaging.
+    - Business productivity applications.
+    - Finance and expense tracking.
 - **ALWAYS RESPONSIBLE NO MATTER WHAT IAAS, SAAS, PAAS OR ON-PREMISES**:
   - **Data**: data classification, data protection, encryption decisions, and compliance with data governance requirements.
   - **Endpoints**: protecting client devices and endpoints that access your cloud services, including mobile devices, laptops, and desktops.
