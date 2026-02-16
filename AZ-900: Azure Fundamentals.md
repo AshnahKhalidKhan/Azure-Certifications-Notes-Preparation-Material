@@ -132,7 +132,10 @@
   - Data Sharing - shares data within and between organizations.
   - Data Estate Insights - accesses data estate health.
   - Data Policy - governs access to data/used to manage access to data sources and datasets.
-- **Management Groups:** manage access, policies and compliance across __**multiple subscriptions.**__
+- **Management Groups:** manage access, policies and compliance across __**multiple subscriptions.**__ Management groups can be nested (one management group within another).
+- 10,000 management groups can be supported in a single directory.
+- A management group tree can support up to six levels of depth. This limit doesn't include the root level or the subscription level.
+- Each management group and subscription can support only one parent.
 - **Administrative Units:** delegate administration of Microsoft Entra resources such as users and groups.
 - **Azure Policy:**
   - enforce company standards on Azure resources.
@@ -157,6 +160,7 @@
   - executes commands in Bash that call Azure REST API.
   - preferable for Linux administrators.
 - **Azure PowerShell:** executes commands in PowerShell.
+- You can quickly change between PowerShell and BASH in the CLI by selecting the Switch to ... button or entering BASH or PWSH.
 
 ###
 - **Azure Resource Manager (ARM) Templates:**
@@ -184,16 +188,31 @@
  - Issues that require __**immediate**__ action such as outages.
 
 ###
+- Some services or virtual machine (VM) features are only available in certain regions, such as specific VM sizes or storage types.
+- There are also some global Azure services that don't require you to select a particular region, such as Microsoft Entra ID, Azure Traffic Manager, and Azure DNS.
+- A region is a geographical area on the planet that contains at least one, but potentially multiple datacenters.
 - **Geography:**
 - **Region Pairs:**
   - Replicate resources across a geography to ensure business continuity during a natural disaster at the primary site.
   - A region which is paired with another region in the same geography.
   - Each region is at least 300 miles away.
+  - Most regions are paired in two directions, meaning they are the backup for the region that provides a backup for them e.g. West US and East US.
+  - Some regions are paired in only one direction, meaning the Primary region does not provide backup for its secondary region e.g. West India's secondary region is South India, but South India's secondary region is Central India.
+- **Sovereign Regions:**
+  - Sovereign regions are instances of Azure that are isolated from the main instance of Azure.
+  - US DoD Central, US Gov Virginia, US Gov Iowa and more: These regions are physical and logical network-isolated instances of Azure for U.S. government agencies and partners. These datacenters are operated by screened U.S. personnel and include additional compliance certifications.
+  - China East, China North, and more: These regions are available through a unique partnership between Microsoft and 21Vianet, whereby Microsoft doesn't directly maintain the datacenters.
 - **Availability Sets:**
 - **Azure Virtual Machine Scale Sets:** deploy, manage and scale a set of identical VMs.
 - **Availability Zones:**
   - Physically separate datacenters within an Azure region, equipped with independent power, cooling and networking.
   - Primarily for VMs, managed disks, load balancers and SQL databases.
+  - Availability zones are connected through high-speed, private fiber-optic networks.
+  - To ensure resiliency, a minimum of three separate availability zones are present in all availability zone-enabled regions. However, not all Azure Regions currently support availability zones.
+- Azure services that support availability zones fall into three categories:
+  - Zonal services: You pin the resource to a specific zone (for example, VMs, managed disks, IP addresses).
+  - Zone-redundant services: The platform replicates automatically across zones (for example, zone-redundant storage, SQL Database).
+  - Non-regional services: Services are always available from Azure geographies and are resilient to zone-wide outages as well as region-wide outages.
 - **Defence In Depth:**
   - use several layers of protection to prevent information from being accessed by unauthorized users.
   - uses a series of mechanisms to slow the advancement of an attack to gain unauthorized access to data.
