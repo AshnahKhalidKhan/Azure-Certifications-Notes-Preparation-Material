@@ -33,6 +33,9 @@
 - **Elasticity:** configure auto-scaling so apps always have the resources they need to meet customer demand.
 - **High Availability:** provide continuous user experience with no apparent/minimal downtime even when things go wrong; depends on SLA chosen.
 - **Disaster Recovery:** Keeping data and other assets safe in the event of a disaster.
+- **Reliability:** Ability of a system to recover from failures and continue functioning.
+- **Cost Predictability:**
+- **Performance Predictability:** Concepts supporting performance predictability include autoscaling, load balancing, and high availability.
 
 ### Shared Responsibility Model
  - **Applications**:
