@@ -152,7 +152,7 @@
   - associate different resources without changing their locations.
   - associate costs with different environments.
   - categorizing costs by department.
-- **Resource Groups:** logical container used to combine and organize Azure resources.
+- **Resource Groups:** logical container used to combine and organize Azure resources. When an action or setting at the Resource Group level is applied, the setting is applied to current and future resources.
 
 ###
 - **Azure Cloud Shell:** Azure portal tool to manage Azure environment.
