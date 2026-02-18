@@ -220,6 +220,17 @@
 - **Disaster Recovery Plan:** includes features like cloud-based backup, data replication and geo-distribution, to keep data safe in the event of a disaster.
 
 ###
+- **Azure Virtual Desktop:**
+  - cloud-based desktop and application virtualization service that allows users to access a cloud-hosted version of Windows from any location. This flexibility is essential for remote work scenarios, enabling users to maintain productivity regardless of their physical location.
+  - It operates across various devices and operating systems, allowing access through remote desktops or modern browsers, which enhances usability and accessibility for users.
+  - The service enhances security with centralized management through Microsoft Entra ID, which enables MFA and RBACs to secure user sign-ins. This centralized approach is vital for organizations aiming to protect sensitive information and manage user access effectively.
+  - Azure Virtual Desktop separates data and applications from local hardware, significantly reducing the risk of confidential data being left on personal devices. This separation ensures that sensitive information is stored securely in the cloud rather than on potentially insecure local machines.
+  - It supports multi-session deployment of Windows 10 or Windows 11 Enterprise, allowing multiple concurrent users on a single VM, which optimizes resource usage and cost efficiency for organizations.
+  - This service provides a consistent user experience with broader application support compared to Windows Server-based operating systems, making it an attractive option for businesses that rely on diverse applications.
+  - Additionally, Azure Virtual Desktop isolates user sessions in both single and multi-session environments, further enhancing security and usability, which is crucial for maintaining a secure and efficient virtual workspace.
+  - lets you use Windows 10 or Windows 11 Enterprise multi-session, the only Windows client-based operating system that enables multiple concurrent users on a single VM.
+
+###
 - **Azure Advisor:**
   - Recommendations for reducing Azure costs.
   - Recommendations to help improve reliability, security, performance, achieve operational excellence and reduce costs.
