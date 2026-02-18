@@ -58,6 +58,7 @@
   - Customer responsible for managing OS and applications, VMs and runtime.
   - Uses consumption-based, pay-as-you-go model.
   - Places the most responsibility on the customer
+  - Ideal when you want total control over OS, the ability to run custom software and to use custom hosting configurations.
   - **Uses:**
     - Lift-and-shift migration: You’re setting up cloud resources similar to your on-prem datacenter, and then simply moving the things running on-prem to running on the IaaS infrastructure.
     - Testing and development: You have established configurations for development and test environments that you need to rapidly replicate. You can start up or shut down the different environments rapidly with an IaaS structure, while maintaining complete control.
@@ -202,8 +203,8 @@
   - Sovereign regions are instances of Azure that are isolated from the main instance of Azure.
   - US DoD Central, US Gov Virginia, US Gov Iowa and more: These regions are physical and logical network-isolated instances of Azure for U.S. government agencies and partners. These datacenters are operated by screened U.S. personnel and include additional compliance certifications.
   - China East, China North, and more: These regions are available through a unique partnership between Microsoft and 21Vianet, whereby Microsoft doesn't directly maintain the datacenters.
-- **Availability Sets:**
-- **Azure Virtual Machine Scale Sets:** deploy, manage and scale a set of identical VMs.
+- **Availability Sets:** enhance resilience and high availability by staggering updates and varying power/network connectivity. They group VMs into update domains (for staggered updates) and fault domains (to protect against power/network failures). There is no additional cost for configuring availability sets; you only pay for the VM instances created. Update domain: The update domain groups VMs that can be rebooted at the same time. Fault domain: The fault domain groups your VMs by common power source and network switch. By default, an availability set splits your VMs across up to three fault domains.
+- **Azure Virtual Machine Scale Sets:** deploy, manage and scale a set of identical VMs. Azure automates configuration, monitoring, and scaling of VMs based on demand or a defined schedule. They include a load balancer to optimize resource usage and are suitable for large-scale services like compute and big data.
 - **Availability Zones:**
   - Physically separate datacenters within an Azure region, equipped with independent power, cooling and networking.
   - Primarily for VMs, managed disks, load balancers and SQL databases.
