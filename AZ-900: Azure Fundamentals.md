@@ -63,7 +63,7 @@
     - Lift-and-shift migration: You’re setting up cloud resources similar to your on-prem datacenter, and then simply moving the things running on-prem to running on the IaaS infrastructure.
     - Testing and development: You have established configurations for development and test environments that you need to rapidly replicate. You can start up or shut down the different environments rapidly with an IaaS structure, while maintaining complete control.
 - **PaaS:**
-  - Examples: Azure SQL Database, Azure App Services, Azure Cosmos DB, Azure Monitor, Azure Functions, and Azure Storage..
+  - Examples: Azure SQL Database, Azure App Services, Azure Cosmos DB, Azure Monitor, Azure Functions, Container Instances and Azure Storage..
   - Do not control OS and do not configure underlying servers.
   - Cloud provider is responsible for managing OS and physical network.
   - Customer is responsible for managing accounts, identities, information and data and user access.
@@ -247,6 +247,11 @@
 - **Azure Container Instances** & **Azure Kubernetes Service (AKS):**
   - Run applications in containers (virtualization environment).
   - Do not need to manage the OS for a container.
+  - Preferred in micro-services architecture.
+- **Azure Container Instances:** PaaS; upload your containers and then the service runs the containers for you.
+- **Azure Container Apps:** PaaS; similar to Container Instance, but extra benefits such as the ability to incorporate load balancing and scaling.
+- **Azure Kubernetes Service:** PaaS; container orchestration service; manages the lifecycle of containers and makes management simpler and more efficent when you're deploying a fleet of containers.
+- **Difference between VMs and containers virtualization:** VMs virtualize the hardware, while containers virtualize the OS.
 
 ###
 - **Azure Storage Accounts:**
