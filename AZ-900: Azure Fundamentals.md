@@ -180,6 +180,25 @@
   - Scale automatically based on demand, so they may be a good choice when demand is variable.
   - Functions can be either stateless or stateful. When they're stateless (the default), they behave as if they restart every time they respond to an event. When they're stateful (called Durable Functions), a context is passed through the function to track prior activity.
 - **Azure Logic Apps:** similar to Azure Functions but uses predefined workflows instead of developing your own code.
+- **Azure App Service:**
+  - robust hosting option that you can use to host your apps in Azure.
+  - ideal choice to host web-oriented applications.
+  - an HTTP-based service for hosting web applications, REST APIs, and mobile back ends.
+  - Enables you to build and host apps without managing infrastructure.
+  - Lets you focus on building and maintaining your app, and Azure focuses on keeping the environment up and running.
+  - Supports multiple technologies, programming languages and frameworks.
+  - Automatic scaling and high availability.
+  - Supportsboth Windows and Linux environments.
+  - Enables automated deployments from GitHub, Azure DevOps, or any Git repo to support a continuous deployment model.
+  - Deployment and management are integrated into the platform.
+  - Endpoints can be secured.
+  - Sites can be scaled quickly to handle high traffic loads.
+  - The built-in load balancing and traffic manager provide high availability.
+  - Types of App Services:
+    - Web apps: host web apps in various programming languages on either Windows or Linux as the host operating system.
+    - API apps: host RESTful APIs that can be consumed by any HTTP-based client, with full support for Swagger documentation and the ability to package and publish your API in Azure Marketplace.
+    - WebJobs: run a program or script (often as a background tasks) in the same context as your web or API apps, which can be triggered or scheduled.
+    - Mobile apps: quickly build a backend for iOS and Android apps including store mobile app data in a cloud-based SQL database, send push notifications, authenticate users against common social providers, execute custom back-end logic in C# or Node.js. with SDK support for native iOS and Android, Xamarin, and React native apps.
 
 ###
 - **Azure Service Health:**
