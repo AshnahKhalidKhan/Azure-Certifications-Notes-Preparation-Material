@@ -174,6 +174,11 @@
 - **Azure Functions:**
   - Execute code in a serverless environments.
   - Run code as a service without having to manage the underlying platform or infrastructure.
+  - Event-driven, serverless compute option that doesn’t require maintaining virtual machines or containers; an event wakes the function, alleviating the need to keep resources provisioned when there are no events so you only pay for what you use.
+  - Scalable - same performance whether one request or thousands of requests.
+  - Used when you need to perform work in response to an event, timer, or message from another Azure service, and when that work can be completed quickly, within seconds or less.
+  - Scale automatically based on demand, so they may be a good choice when demand is variable.
+  - Functions can be either stateless or stateful. When they're stateless (the default), they behave as if they restart every time they respond to an event. When they're stateful (called Durable Functions), a context is passed through the function to track prior activity.
 - **Azure Logic Apps:** similar to Azure Functions but uses predefined workflows instead of developing your own code.
 
 ###
