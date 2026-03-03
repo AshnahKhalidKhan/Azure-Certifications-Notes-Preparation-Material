@@ -301,10 +301,38 @@
   - **SSPR** prevents users from using known compromised passwords.
 
 ###
-- **Service Endpoints:** used to expose Azure services to a VNET e.g. Azure SQL DB to Azure VNET.
-- **ExpressRoute**: used to connect an on-premises network to Azure.
-- **Peering**: connect VNETs together.
-- **NSGs:** configure inbound and outbound rules for VNETs and VMs.
+- VNETs can connect to specific Azure resources. **Service Endpoints** can connect to all Azure resources of a specific type.
+- **Service Endpoints:**
+  - Used to expose an Azure service (all Azure resources of a specific service type) to a VNET e.g. Azure SQL DB to Azure VNET.
+  - Used to link multiple Azure resources to virtual networks to improve security and provide optimal routing between resources.
+- **Connect on-premises and Azure network:**
+  - **Point-to-site VPN:**
+    - connect from home to corporate Azure network.
+    - client computer initiates an encrypted VPN connection to connect to the Azure VNET.
+  - **Site-to-site VPN:**
+    - links your on-premises VPN device/gateway to the Azure VPN gateway in a VNET.
+    - the devices in Azure can appear as being on the local network.
+    - The connection is encrypted and works over the internet.
+  - **ExpressRoute:**
+    - used to connect an on-premises network to Azure.
+    - provides a dedicated private connectivity to Azure that doesn't travel over the internet.
+    - useful for environments where you need greater bandwidth and even higher levels of security.
+- **Route tables:**
+  - define rules about how traffic should be directed.
+  - You can create custom route tables that control how packets are routed between subnets.
+- **Border Gateway Protocol (BGP):**
+  - works with Azure VPN gateways, Azure Route Server, or Azure ExpressRoute to propagate on-premises BGP routes to Azure virtual networks.
+  - Basically, on-premises devices are routable/resolvable by Azure VNETs.
+  - BGP shares routing information from an on-premises network to Azure’s VNETs.
+- **Peering**:
+  - connect VNETs together.
+  - Network traffic between peered networks is private, and travels on the Microsoft backbone network, never entering the public internet.
+  - User-defined routes (UDR) allow you to control the routing tables between subnets within a VNET or between VNETs.
+- **NSGs:** configure inbound and outbound rules for VNETs and VMs to allow/block traffic.
+- **NVAs**:
+  - Network Virtual Appliances
+  - Specialized VMs that can be compared to a hardened network appliance.
+  - carries out a particular network function, such as running a firewall or performing wide area network (WAN) optimization.
 - **VPN Gateway:**
   - Type of virtual network gateway.
   - Deployed to a dedicated subnet of a VNET.
