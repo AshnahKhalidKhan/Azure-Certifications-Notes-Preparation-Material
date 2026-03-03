@@ -317,6 +317,10 @@
     - used to connect an on-premises network to Azure.
     - provides a dedicated private connectivity to Azure that doesn't travel over the internet.
     - useful for environments where you need greater bandwidth and even higher levels of security.
+    - Connectivity to Microsoft cloud services across all regions in the geopolitical region.
+    - Global connectivity to Microsoft services across all regions with the ExpressRoute Global Reach.
+    - Dynamic routing between your network and Microsoft via Border Gateway Protocol (BGP).
+    - Built-in redundancy in every peering location for higher reliability.
 - **Route tables:**
   - define rules about how traffic should be directed.
   - You can create custom route tables that control how packets are routed between subnets.
@@ -337,3 +341,21 @@
   - Type of virtual network gateway.
   - Deployed to a dedicated subnet of a VNET.
   - Used to connect an on-premises datacenter to Azure VNET through __**Site-to-Site(S2S)**__ VPN connection.
+  - Used to connect individual devices to Azure VNET through a __**Point-to-Site(P2S)**__ connection.
+  - Used to connect Azure VNET to VNET through a __**network-to-network**__ connection.
+  - You can deploy only one VPN gateway in each virtual network.
+  - **Policy-based VPN Gateways:** Specify static IP addresses whose traffic is to be encrypted and sent through which tunnel.
+  - **Route-based VPN Gateways:** Treat each VPN tunnel as a virtual network interface, and use IP routing (static or dynamic) to decide which tunnel carries each packet. Traffic is determined by destination network routes, not by static IP rules.
+    - Used for:
+      - Connections between virtual networks
+      - Point-to-site connections
+      - Multisite connections
+      - Coexistence with an Azure ExpressRoute gateway
+- **Azure DNS:**
+  - a hosting service for DNS domains that provides name resolution by using Microsoft Azure infrastructure.
+  - DNS domains in Azure DNS are hosted on Azure's global network of DNS name servers, providing resiliency and high availability.
+  - Azure DNS uses anycast networking, so the closest available DNS server answers each DNS query, providing fast performance and high availability for your domain.
+  - Azure RBAC, locks, monitoring available on actions on the DNS.
+  - Supports private DNS domains allowing you to use your own custom domain names in your private virtual networks, rather than being stuck with the Azure-provided names (e.g. instead of myvm.eastus.cloudapp.azure.com, you can do myvm.internal.company.com in your private VNET).
+  - Supports alias record sets i.e. if the IP address of the underlying resource changes, the alias record set seamlessly updates itself during DNS resolution. The alias record set points to the service instance, and the service instance is associated with an IP address.
+  - You **cannot** use Azure DNS to buy a domain name.
