@@ -220,18 +220,6 @@
     - Mobile apps: quickly build a backend for iOS and Android apps including store mobile app data in a cloud-based SQL database, send push notifications, authenticate users against common social providers, execute custom back-end logic in C# or Node.js. with SDK support for native iOS and Android, Xamarin, and React native apps.
 
 ###
-- **Azure Service Health:**
-  - Review root cause analysis (RCA) report for service outages.
-  - Notification of service outages in a specific Azure region.
-  - Information about planned maintenance for Azure services.
-  - When a reboot is required for a service, it will allow you to choose when to perform the maintenance to minimize downtime.
-- **Health Advisories:**
-  - Issues that require you to take __**proactive**__ action to avoid service interruptions.
-  - Should proactively review and act on to avoid __**service retirements**__ and __**breaking changes**__.
-- **Service Issues:**
- - Issues that require __**immediate**__ action such as outages.
-
-###
 - Some services or virtual machine (VM) features are only available in certain regions, such as specific VM sizes or storage types.
 - There are also some global Azure services that don't require you to select a particular region, such as Microsoft Entra ID, Azure Traffic Manager, and Azure DNS.
 - A region is a geographical area on the planet that contains at least one, but potentially multiple datacenters.
@@ -274,6 +262,16 @@
   - lets you use Windows 10 or Windows 11 Enterprise multi-session, the only Windows client-based operating system that enables multiple concurrent users on a single VM.
 
 ###
+- **Azure Service Health:**
+  - Review root cause analysis (RCA) report for service outages.
+  - Notification of service outages in a specific Azure region.
+  - Information about planned maintenance for Azure services.
+  - When a reboot is required for a service, it will allow you to choose when to perform the maintenance to minimize downtime.
+- **Health Advisories:**
+  - Issues that require you to take __**proactive**__ action to avoid service interruptions.
+  - Should proactively review and act on to avoid __**service retirements**__ and __**breaking changes**__.
+- **Service Issues:**
+ - Issues that require __**immediate**__ action such as outages.
 - **Azure Advisor:**
   - Recommendations for reducing Azure costs.
   - Recommendations to help improve reliability, security, performance, achieve operational excellence and reduce costs.
@@ -282,9 +280,13 @@
 - **Azure Monitor:**
   - Platform that collects metric and logging data.
   - Can be used to trigger auto-scaling using thresholds.
-- **Application Insights:**
-  - Automatically detect performance anomalies for web apps.
-  - Use built-in analytics to see what users do on an app.
+  - **Log Analytics:** write and run queries against the data Azure Monitor collects.
+  - **Application Insights:**
+    - Automatically detect performance anomalies for web apps.
+    - Use built-in analytics to see what users do on an app.
+    - Use __**Availability Tests**__ to send synthetic requests to your application so you know it's responding.
+    - Support web apps running in Azure, on-premises, or in another cloud.
+  - **Azure Monitor Alerts:** metric-based or log-based alert against a condition met on.
 
 ###
 - **Azure Container Instances** & **Azure Kubernetes Service (AKS):**
