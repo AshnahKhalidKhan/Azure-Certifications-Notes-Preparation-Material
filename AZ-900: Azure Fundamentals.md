@@ -278,12 +278,53 @@
 - **Difference between VMs and containers virtualization:** VMs virtualize the hardware, while containers virtualize the OS.
 
 ###
-- **Azure Storage Accounts:**
-  - **Azure Blob Storage:** store unstructured files e.g. images, text and binary data.
-  - **Azure Disk Storage:**
-  - **Azure Queue Storage:**
-  - **Azure Table Storage:**
+- **Azure Storage Account Types:**
+  - **Standard general-purpose v2:** all service types and redundancies supported.
+  - **Premium block blobs:** Supports Blob Storage, and LRS + ZRS only; recommended for high transaction rates or scenarios requiring low storage latency.
+  - **Premium file shares:** Supports Azure Files, and LRS + ZRS only; recommended for enterprise or high-performance scale applications, supporting both SMB and NFS file shares.
+  - **Premium page blobs:** Supports page blobs only and LRS only.
+- **Azure Storage Service Types:**
+  - **Azure Disk Storage:** block-level volumes for VMs.
+  - **Azure Queue Storage:** messaging store for async processing.
+  - **Azure Blob Storage:** store **unstructured** files e.g. __**images/audio/video, text and binary data**__; includes support for big __**data analytics**__ through Data Lake Storage Gen2.
+  - **Azure Table Storage:** NoSQL table option for **structured**, non-relational data.
   - **Azure Files:** fully managed fileshares accessible using __**Server Message Block (SMB)**__ and __**Network File System (NFS)**__ protocol.
+- **Redundancy options:**
+  - Data replication is asynchronous with __**Recovery Point Objective**__ (time between most recent writes to primary and last write to secondary) as 15 minutes.
+  - **LRS:** three copies in same datacenter.
+  - **ZRS:** one copy in three datacenters.
+  - **GRS:** three copies in two regions each.
+  - **GZRS:** one copy in three datacenters in primary region, three copies in one datacenter in secondary region.
+  - **RA-GRS:** same as GRS with read access possible in secondary region without failover.
+  - **RA-GRS:** same as GZRS with read access possible in secondary region without failover.
+- **Storage tiers**:
+  - **Hot:** Highest storage cost, lowest access cost + retrieval latency, optimized for storing frequently accessed data (for example, images for your website).
+  - **Cool:** Optimized for infrequently accessed data stored for at least 30 days (for example, invoices for your customers).
+  - **Cold:** Optimized for infrequently accessed data stored for at least 90 days.
+  - **Archive:** Lowest storage cost, highest access cost + retrieval latency, optimized for rarely accessed data and stored for at least 180 days with flexible latency (e.g. long-term backups).
+- **Storage Transfer:**
+  - **Azure Migrate:**
+    - migrate from on-premises to Azure.
+    - real-time migration.
+    - options for discovery and assessment, server migration, database migration, and web app migration.
+  - **Azure Data Box:**
+    - physical migration service.
+    - Data Box devices is transported to and from your datacenter via a regional carrier, onnect it to your network, transfer data, wipe data clean when done and return the device.
+    - One-time bulk migration of on-premises data to Azure (up to 80 TB).
+    - Periodic large data uploads where online transfer is too slow.
+    - Exporting large data sets from Azure for recovery or regulatory needs.
+  - **AzCopy:**
+    - command-line utility that you can use to copy/upload/download/move blobs or files to or from your storage account.
+    - one-direction synchronizing of blobs or files.
+  - **Azure Storage Explorer:**
+    - GUI app that uses AzCopy at backend.
+    - Supported on all OS.
+  - **Azure File Sync:**
+    - bi-directionally syncing from local Windows server (where it is set up) with your files in Azure.
+    - Use any protocol (SMB, NFS, FTPS) that's available on Windows Server to access your data locally.
+    - Mutlisite caching across the world.
+    - Replace a failed local server by installing Azure File Sync on a new server in the same datacenter.
+    - Configure __**cloud tiering**__ (most frequently accessed files are replicated locally, while infrequently accessed files are kept in the cloud until requested).
 
 ###
 - **Microsoft Entra:** Provides two services i.e. **authentication** and **SSO**.
