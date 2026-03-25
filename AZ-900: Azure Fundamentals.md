@@ -267,6 +267,11 @@
   - Notification of service outages in a specific Azure region.
   - Information about planned maintenance for Azure services.
   - When a reboot is required for a service, it will allow you to choose when to perform the maintenance to minimize downtime.
+  - Provides links to support during outages/health issues so you can respond quickly.
+  - Components:
+    - **Azure Status:** global-level, across all services and regions.
+    - **Service Health:** personal-level, across all service and regions we actually use.
+    - **Resource Health:** individual resource-level.
 - **Health Advisories:**
   - Issues that require you to take __**proactive**__ action to avoid service interruptions.
   - Should proactively review and act on to avoid __**service retirements**__ and __**breaking changes**__.
@@ -275,6 +280,7 @@
 - **Azure Advisor:**
   - Recommendations for reducing Azure costs.
   - Recommendations to help improve reliability, security, performance, achieve operational excellence and reduce costs.
+  - **No recommendations for capacity**.
 
 ###
 - **Azure Monitor:**
