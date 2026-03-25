@@ -137,10 +137,13 @@
   - accelerate migration and minimize downtime by using the latest VMware Hybrid Cloud Extension (HCX) Enterprise functionality for large-scale, live migration from on-premises to Azure.
   - **Azure NetApp Files** is a native Azure service can be used to mount virtual machine (VM) file shares using server message block (SMB) or network file system (NFS).
 - **Microsoft Purview:**
-  - Data Catalog - enables data discovery.
-  - Data Sharing - shares data within and between organizations.
-  - Data Estate Insights - accesses data estate health.
-  - Data Policy - governs access to data/used to manage access to data sources and datasets.
+  - data governance, risk, and compliance solutions that helps you get a single, unified view into your data on on-premises, multicloud, and software-as-a-service data together.
+  - sensitive data classification.
+  - **Data Catalog** - enables data discovery.
+  - **Data Sharing** - shares data within and between organizations.
+  - **Data Estate Insights** - accesses data estate health.
+  - **Data Policy** - governs access to data/used to manage access to data sources and datasets.
+- **Microsoft Service Trust Portal**: portal that provides access to various content, tools, and other resources about Microsoft security, privacy, and compliance practices. 
 - **Management Groups:** manage access, policies and compliance across __**multiple subscriptions.**__ Management groups can be nested (one management group within another).
 - 10,000 management groups can be supported in a single directory.
 - A management group tree can support up to six levels of depth. This limit doesn't include the root level or the subscription level.
@@ -157,7 +160,7 @@
   - Scope is a resource or set of resources to which access is applied to.
   - Azure RBAC doesn't enforce access permissions at the application or data level.
   - Azure RBAC is enforced on any action that's initiated against an Azure resource that passes through Azure Resource Manager. **Resource Manager** is a management service that provides a way to organize and secure your cloud resources.
-- **Resource Locks:** prevent the accidental change or deletion of a resource.
+- **Resource Locks:** prevent the accidental change or deletion of a resource (ReadOnly & Delete Locks).
 - **Resource Tags:**
   - locate and act on resource associated with a specific workloads, environments, business units, or owners.
   - associate different resources without changing their locations.
