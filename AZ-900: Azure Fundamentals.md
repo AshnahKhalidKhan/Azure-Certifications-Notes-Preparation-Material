@@ -147,6 +147,8 @@
 - **Azure RBAC:**
   - Applied to a scope.
   - Scope is a resource or set of resources to which access is applied to.
+  - Azure RBAC doesn't enforce access permissions at the application or data level.
+  - Azure RBAC is enforced on any action that's initiated against an Azure resource that passes through Azure Resource Manager. **Resource Manager** is a management service that provides a way to organize and secure your cloud resources.
 - **Resource Locks:** prevent the accidental change or deletion of a resource.
 - **Resource Tags:**
   - locate and act on resource associated with a specific workloads, environments, business units, or owners.
@@ -328,6 +330,18 @@
 
 ###
 - **Microsoft Entra:** Provides two services i.e. **authentication** and **SSO**.
+- **Microsoft Entra Connect:**
+  - Connects on-premises AD to Microsoft Entra ID.
+  - sync identities from on-premises ADDS domain to Microsoft Entra tenant.
+  - use SSO, MFA and SSPR (self-service password reset).
+  - **SSPR** prevents users from using known compromised passwords.
+- **Microsoft Domain Services:** Provides managed domain services without requiring you to deploy or maintain domain controllers in the cloud, especially useful for legacy applications that can't use modern authentication.
+- On-premises AD syncs bi-directionally to Micrososft Entra ID, using Microsoft Entra Connect. Microsoft Entra ID syncs one way to Microsoft Entra Domain Services.
+- **Microsoft Entra External ID:**
+  - **B2B Collaboration:** External users added in our directory as guest users.
+  - **B2B Direct Connect:** Supports Teams shared channels, enabling external users to access your resources from within their home instances of Teams without being added in our directory; used for users in another Microsoft tenant.
+  - **External ID for Customers/Azure B2C:** External users managed in separate External ID tenant; used in customer-facing/SaaS apps.
+- **Passwordless authentication:** fingerprint or PIN (Windows Hello for Business, Microsoft Authenticator app, FIDO2 security keys).
 - **SSO:** sign in one time and use that credential to access multiple resources and applications from different providers.
 - **MFA:** prompted for an additional form of identification during sign-in.
 - **Conditional Access:**
@@ -336,10 +350,18 @@
   - Can enforce uers sign in from a specific location only.
   - Can enforce whether or not MFA is required.
 - **Device Management:** registration of devices on Entra.
-- **Microsoft Entra Connect:**
-  - sync identities from on-premises ADDS domain to Microsoft Entra tenant.
-  - use SSO, MFA and SSPR (self-service password reset).
-  - **SSPR** prevents users from using known compromised passwords.
+- **Zero Trust:**
+  - a security model that assumes the worst case scenario and protects resources with that expectation.
+  - means access decisions are continuous and context-aware, not based only on where the request originates.
+  - Verify explicitly: Always authenticate and authorize based on all available data points.
+  - Use least privilege access: Limit user access with Just-In-Time and Just-Enough-Access (JIT/JEA), risk-based adaptive policies, and data protection.
+  - Assume breach: Limit the potential impact and segment access. Verify end-to-end encryption. Use analytics to get visibility, drive threat detection, and improve defenses.
+- **Microsoft Defender for Cloud:**
+  - continuously monitors security posture across cloud, on-premises, hybrid, and multicloud environments.
+  - provides threat detection and alerts helping poroactive stance and response to incidents.
+  - assesses vulnerabilities and suggests remediation steps to mitigate risks.
+  - offers recommendations to strengthen security based on Azure Security Benchmark.
+  - 
 
 ###
 - VNETs can connect to specific Azure resources. **Service Endpoints** can connect to all Azure resources of a specific type.
