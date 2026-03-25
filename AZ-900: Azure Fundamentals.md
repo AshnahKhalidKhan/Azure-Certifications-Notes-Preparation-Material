@@ -100,15 +100,23 @@
   - Customers, however, remain accountable for how AI is applied within their environment—this includes protecting sensitive data, managing prompt security, mitigating prompt injection risks, and ensuring compliance with organizational and regulatory requirements.
 
 ###
-- **Total Costs of Ownership (TCO) Calculator:**
+- **Total Costs of Ownership (TCO) Calculator: (Deprecated, only pricing calculator available now)**
   - Estimate the cost savings over time of operating a solution in Azure compared to an on-premises datacenter.
   - Example: compare costs of running an app in an on-premises datacenter with the costs of running the application in Azure.
 - **Azure Pricing Calculator:** used to estimate costs for based on resource requirements.
-- Factors affecting Azure costs: resource location and resource usage.
+- Factors affecting Azure costs: resource location, resource usage, subscription type (trial/free etc), Azure Marketplace (third-party vendor costs).
 - Resource usage: CPU time, disk size, write operations.
 - Deleting/deallocating resources stops billing for it.
 - Costs are same no matter time of day or day of the the week.
+- **Budget alerts:** Alerts for exceeding budget.
+- **Credit alerts:** For organizations with Enterprise Agreements (EAs) only; alert when Azure credit monetary commitments are consumed.
+- **Department spending quota alerts:** specific to Enterprise Agreement customers; alert when department spending reaches a fixed threshold of the quota.
 - **Azure Reservations:** Up to **72% discount** on several resources with consistent usage for a long period of time without reducing functionality of the resource.
+- **Azure savings plan**: used for when compute usage steady but you need more flexibility across compute services (commit to hourly compute usage instead of specific VM or instance type).
+- **Spot pricing**: used for fault-tolerant or interruptible workloads where lowest cost is the top priority.
+- For example, a production SQL workload that runs 24/7 might align with Reservations.
+- A mixed web/API workload that shifts among compute services might fit an Azure savings plan for compute.
+- Batch rendering or test jobs that can restart are common Spot pricing candidates.
 - **Spending limits:** Suspend a subscription when spending limit is reached.
 
 ###
@@ -155,6 +163,8 @@
   - associate different resources without changing their locations.
   - associate costs with different environments.
   - categorizing costs by department.
+  - help stay organized and track usage based on __**metadata**__ associated with resources.
+  - Resources don't inherit tags from subscriptions and resource groups, meaning that you can apply tags at one level and not have those tags automatically show up at a different level.
 - **Resource Groups:** logical container used to combine and organize Azure resources. When an action or setting at the Resource Group level is applied, the setting is applied to current and future resources.
 
 ###
