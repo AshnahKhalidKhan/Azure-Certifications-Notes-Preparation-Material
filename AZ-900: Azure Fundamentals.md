@@ -159,7 +159,7 @@
   - Applied to a scope.
   - Scope is a resource or set of resources to which access is applied to.
   - Azure RBAC doesn't enforce access permissions at the application or data level.
-  - Azure RBAC is enforced on any action that's initiated against an Azure resource that passes through Azure Resource Manager. **Resource Manager** is a management service that provides a way to organize and secure your cloud resources.
+  - Azure RBAC is enforced on any action that's initiated against an Azure resource that passes through Azure Resource Manager (ARM).
 - **Resource Locks:** prevent the accidental change or deletion of a resource (ReadOnly & Delete Locks).
 - **Resource Tags:**
   - locate and act on resource associated with a specific workloads, environments, business units, or owners.
@@ -179,13 +179,17 @@
 - You can quickly change between PowerShell and BASH in the CLI by selecting the Switch to ... button or entering BASH or PWSH.
 
 ###
+- **Azure Resource Manager:** Management service that provides a way to organize and secure your cloud resources.
 - **Azure Resource Manager (ARM) Templates:**
   - deployment and management service for Azure.
+  - JSON file.
   - __**Parallel and idempotent**__ creation of Azure resources.
   - Defines application's infrastruction requirments.
   - Includes a validation step to ensure all resources are created in an order based on dependencies. 
   - Used for repeatable deployments done in a consistent matter.
   - Provides a management layer that accepts requests from any Azure tool or API.
+- **Bicep:** declarative language for deploying Azure resources through ARM; simpler and more concise than JSON ARM templates.
+- **Infrastructure as code (IaC):** managing infrastructure through code and templates instead of manual configuration e.g. through Azure CLI, PowerShell or ARM templates, Bicep.
 - **Azure Functions:**
   - Execute code in a serverless environments.
   - Run code as a service without having to manage the underlying platform or infrastructure.
